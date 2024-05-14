@@ -1,5 +1,9 @@
 h1 {
 	color: #086776;
 	text-shadow: white 1px 0 10px;
-    background: linear-gradient(to right, white, black);
+    background: linear-gradient(to right, black, white);
+}
+
+h2 {
+	border: solid #086776;
 }
