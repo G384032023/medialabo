@@ -1,3 +1,7 @@
+world {
+    font-size: 200%;
+}
+
 div {
     display: grid;
 	width: 1024px;
