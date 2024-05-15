@@ -1,7 +1,6 @@
 h1 {
-	color: #086776;
-	text-shadow: white 1px 0 20px;
-    background: linear-gradient(to right, black, white);
+	color: black;
+    background: linear-gradient(to right, white, #086776);
 }
 
 h2 {
