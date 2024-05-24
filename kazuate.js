@@ -37,3 +37,8 @@ function hantei() {
     }
   }
 }
+
+let c = document.querySelector('span#kaisu');
+let count = document.createElement('p');
+count.textContent = kaisu;
+c.insertAdjacentElement('afterend',count);
