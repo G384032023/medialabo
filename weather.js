@@ -57,3 +57,10 @@ console.log(data.wind.speed);
 console.log(data.wind.deg);
 console.log(data.coord.lon);
 console.log(data.coord.lat);
+
+let re = document.querySelector('div#result');
+let r = document.createElement('ul');
+let cap = document.createElement('li');
+cap.textContent = data.name;
+r.insertAdjacentElement('beforeend',cap);
+re.insertAdjacentElement('beforeend',r);
