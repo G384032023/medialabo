@@ -42,5 +42,19 @@ function hantei() {
 
   let ans = document.querySelector('span#answer');
   ans.textContent = yoso;
+
+  if(kaisu >= 4 || (kaisu >= 2 && yoso === kotae)){
+    re.textContent = '答えは' + kotae + 'でした．すでにゲームは終わっています．';
+  }else if(yoso === kotae){
+    re.textContent = '正解です．おめでとう！';
+  }else if(kaisu === 3 && yoso !== kotae){
+    re.textContent = 'まちがい．残念でした答えは' + kotae + 'でした．';
+  }else{
+    if(yoso > kotae){
+        re.textContent = 'まちがい．答えはもっと小さいですよ．';
+    }else{
+        re.textContent = 'まちがい．答えはもっと大きいですよ．';
+    }
+  }
 }
 
