@@ -36,9 +36,9 @@ function hantei() {
         console.log("まちがい．答えはもっと大きいですよ．");
     }
   }
-}
-
 let c = document.querySelector('span#kaisu');
 let count = document.createElement('p');
 count.textContent = kaisu;
 c.insertAdjacentElement('afterend',count);
+}
+
