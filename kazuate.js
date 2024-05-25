@@ -43,6 +43,7 @@ function hantei() {
   let ans = document.querySelector('span#answer');
   ans.textContent = yoso;
 
+  let re = document.querySelector('p#result');
   if(kaisu >= 4 || (kaisu >= 2 && yoso === kotae)){
     re.textContent = '答えは' + kotae + 'でした．すでにゲームは終わっています．';
   }else if(yoso === kotae){
