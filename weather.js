@@ -73,7 +73,7 @@ r.insertAdjacentElement('beforeend',wea);
 
 let temax = document.createElement('li');
 temax.textContent = '最高気温:' + data.main.temp_max;
-r.insertAdjacentElement('beforeend',tempm);
+r.insertAdjacentElement('beforeend',temax);
 
 let temin = document.createElement('li');
 temin.textContent = '最低気温:' + data.main.temp_min;
