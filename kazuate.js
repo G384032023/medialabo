@@ -20,7 +20,8 @@ let kaisu = 0;
 function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   let i = document.querySelector('input[name = "seisu"]');
-  let yoso = Number(i);
+  let n = i.value;
+  let yoso = Number(n);
   
   // 課題3-1: 正解判定する
   // kotae と yoso が一致するかどうか調べて結果を出力
