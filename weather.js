@@ -61,6 +61,6 @@ console.log(data.coord.lat);
 let re = document.querySelector('div#result');
 let r = document.createElement('ul');
 let cap = document.createElement('li');
-cap.textContent = data.name;
+cap.textContent = '都市名:' + data.name;
 r.insertAdjacentElement('beforeend',cap);
 re.insertAdjacentElement('beforeend',r);
