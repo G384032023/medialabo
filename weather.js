@@ -64,3 +64,37 @@ let cap = document.createElement('li');
 cap.textContent = '都市名:' + data.name;
 r.insertAdjacentElement('beforeend',cap);
 re.insertAdjacentElement('beforeend',r);
+
+let wea = document.createElement('li');
+for(let n of data.weather){
+  wea.textContent = '天気:' + n.description;
+}
+r.insertAdjacentElement('beforeend',wea);
+
+let temax = document.createElement('li');
+temax.textContent = '最高気温:' + data.main.temp_max;
+r.insertAdjacentElement('beforeend',tempm);
+
+let temin = document.createElement('li');
+temin.textContent = '最低気温:' + data.main.temp_min;
+r.insertAdjacentElement('beforeend',temin);
+
+let humi = document.createElement('li');
+humi.textContent = '湿度:' + data.main.humidity;
+r.insertAdjacentElement('beforeend',humi);
+
+let sp = document.createElement('li');
+sp.textContent = '風速:' + data.wind.speed;
+r.insertAdjacentElement('beforeend',sp);
+
+let de = document.createElement('li');
+de.textContent = '風向:' + data.wind.deg;
+r.insertAdjacentElement('beforeend',de);
+
+let lo = document.createElement('li');
+lo.textContent = '緯度:' + data.coord.lon;
+r.insertAdjacentElement('beforeend',lo);
+
+let la = document.createElement('li');
+la.textContent = '経度:' + data.coord.lat;
+r.insertAdjacentElement('beforeend',la);
