@@ -8,13 +8,20 @@
     </head>
     <body>
         <h1>世界の天気</h1>
-        <map name="world">
-            <area
-                shape="circle"
-                coords="75,75,75"
-                href="https://www.nishita-lab.org/web-contents/jsons/openweather_2643743.json"
-                target="_blank"
-                alt="London" />
+        <p>
+            <input type="checkbox" name="country" id="Cairo" value="Cairo">
+            <label for="Cairo">エジプト　カイロ</label>
+            <input type="checkbox" name="country" id="Moscow" value="Moscow">
+            <label for="Moscow">ロシア　モスクワ</label>
+            <input type="checkbox" name="country" id="Johannesburg" value="Johannesburg">
+            <label for="Johannesburg">南アフリカ　ヨハネスブルク</label>
+            <input type="checkbox" name="country" id="Beijing" value="Beijing">
+            <label for="Beijing">中国　北京</label>
+            <input type="checkbox" name="country" id="Tokyo" value="Tokyo">
+            <label for="Tokyo">日本　東京</label>
+            <input type="checkbox" name="country" id="Singapore" value="Singapore">
+            <label for="Singapore">シンガポール</label>
+        </p>
         <div id = "result"></div>
     </body>
 </html>
