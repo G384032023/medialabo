@@ -8,32 +8,45 @@
     </head>
     <body>
         <h1>世界の天気</h1>
+
+        <label for="name">都市名</label>
+        <select name="name" id="name">
+            <option value="">都市名を1つ選んでください</option>
+            <option value="Cairo">カイロ(エジプト)</option>
+            <option value="Moscow">モスクワ(ロシア)</option>
+            <option value="Johannesburg">ヨハネスブルク(南アフリカ)</option>
+            <option value="Beijing">北京(中国)</option>
+            <option value="Tokyo">東京(日本)</option>
+            <option value="Singapore">シンガポール</option>
+            <option value="Sydney">シドニー(オーストラリア)</option>
+            <option value="London">ロンドン(イギリス)</option>
+            <option value="Paris">パリ(フランス)</option>
+            <option value="Rio">リオデジャネイロ(ブラジル)</option>
+            <option value="NewYork">ニューヨーク(アメリカ)</option>
+            <option value="LosAngeles">ロサンゼルス(アメリカ)</option>
+        </select>
+        <button id="btn">表示</button>
+
         <p>
-            <input type="checkbox" name="country" id="Cairo" value="Cairo">
-            <label for="Cairo">カイロ(エジプト)</label>
-            <input type="checkbox" name="country" id="Moscow" value="Moscow">
-            <label for="Moscow">モスクワ(ロシア)</label>
-            <input type="checkbox" name="country" id="Johannesburg" value="Johannesburg">
-            <label for="Johannesburg">ヨハネスブルク(南アフリカ)</label>
-            <input type="checkbox" name="country" id="Beijing" value="Beijing">
-            <label for="Beijing">北京(中国)</label>
-            <input type="checkbox" name="country" id="Tokyo" value="Tokyo">
-            <label for="Tokyo">東京(日本)</label>
-            <input type="checkbox" name="country" id="Singapore" value="Singapore">
-            <label for="Singapore">シンガポール</label>
-            <input type="checkbox" name="country" id="Sydney" value="Sydney">
-            <label for="Sydney">シドニー(オーストラリア)</label>
-            <input type="checkbox" name="country" id="London" value="London">
-            <label for="London">ロンドン(イギリス)</label>
-            <input type="checkbox" name="country" id="Paris" value="Paris">
-            <label for="Paris">パリ(フランス)</label>
-            <input type="checkbox" name="country" id="Rio" value="Rio">
-            <label for="Rio">リオデジャネイロ(ブラジル)</label>
-            <input type="checkbox" name="country" id="NewYork" value="NewYork">
-            <label for="NewYork">ニューヨーク(アメリカ)</label>
-            <input type="checkbox" name="country" id="LosAngeles" value="LosAngeles">
-            <label for="LosAngeles">ロサンゼルス(アメリカ)</label>
+            <input type="checkbox" name="option" id="weather" value="weather">
+            <label for="weather">天気</label>
+            <input type="checkbox" name="option" id="temp_min" value="temp_min">
+            <label for="temp_min">最低気温</label>
+            <input type="checkbox" name="option" id="temp_max" value="temp_max">
+            <label for="temp_max">最高気温</label>
+            <input type="checkbox" name="option" id="humidity" value="humidity">
+            <label for="humidity">湿度</label>
+            <input type="checkbox" name="option" id="speed" value="speed">
+            <label for="speed">風速</label>
+            <input type="checkbox" name="option" id="deg" value="deg">
+            <label for="deg">風向</label>
+            <input type="checkbox" name="option" id="lon" value="lon">
+            <label for="lon">緯度</label>
+            <input type="checkbox" name="option" id="lat" value="lat">
+            <label for="lat">経度</label>
         </p>
+
         <div id = "result"></div>
+        
     </body>
 </html>
