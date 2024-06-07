@@ -66,3 +66,11 @@ function Result(resp){
   let server = resp.data;
   console.log(server);
 }
+
+function showError(err){
+  console.log(err);
+}
+
+function finish(){
+  console.log('行ってらっしゃい!');
+}
