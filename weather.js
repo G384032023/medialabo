@@ -55,6 +55,7 @@ function showResult(){
   let os = s.querySelectorAll('option');
   let o = os.item(idx);
 
+  console.log(o);
   console.log('value = ' + o.getAttribute('value'));
   console.log('textContent = ' + o.textContent);
 }
