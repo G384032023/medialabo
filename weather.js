@@ -55,7 +55,14 @@ function showResult(){
   let os = s.querySelectorAll('option');
   let o = os.item(idx);
 
-  console.log(o);
   console.log('value = ' + o.getAttribute('value'));
   console.log('textContent = ' + o.textContent);
+
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + o.getAttribute('value') + '.json';
+  axios.get(url).then(Result).catch(showError).then(finish);
+}
+
+function Result(resp){
+  let server = resp.data;
+  console.log(server);
 }
