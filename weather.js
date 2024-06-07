@@ -46,55 +46,15 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-console.log(data.name);
-for(let n of data.weather){
-  console.log(n.description);
+let b = document.querySelector('button#btn'); 
+b.addEventListener('click',showResult);
+function showResult(){
+  let s = document.querySelector('select#name');
+  let idx = s.selectedIndex;
+
+  let os = s.querySelectorAll('option');
+  let o = os.item(idx);
+
+  console.log('value = ' + o.getAttribute('value'));
+  console.log('textContent = ' + o.textContent);
 }
-console.log(data.main.temp_max);
-console.log(data.main.temp_min);
-console.log(data.main.humidity);
-console.log(data.wind.speed);
-console.log(data.wind.deg);
-console.log(data.coord.lon);
-console.log(data.coord.lat);
-
-let re = document.querySelector('div#result');
-let r = document.createElement('ul');
-let cap = document.createElement('li');
-cap.textContent = '都市名:' + data.name;
-r.insertAdjacentElement('beforeend',cap);
-re.insertAdjacentElement('beforeend',r);
-
-let wea = document.createElement('li');
-for(let n of data.weather){
-  wea.textContent = '天気:' + n.description;
-}
-r.insertAdjacentElement('beforeend',wea);
-
-let temax = document.createElement('li');
-temax.textContent = '最高気温:' + data.main.temp_max;
-r.insertAdjacentElement('beforeend',temax);
-
-let temin = document.createElement('li');
-temin.textContent = '最低気温:' + data.main.temp_min;
-r.insertAdjacentElement('beforeend',temin);
-
-let humi = document.createElement('li');
-humi.textContent = '湿度:' + data.main.humidity;
-r.insertAdjacentElement('beforeend',humi);
-
-let sp = document.createElement('li');
-sp.textContent = '風速:' + data.wind.speed;
-r.insertAdjacentElement('beforeend',sp);
-
-let de = document.createElement('li');
-de.textContent = '風向:' + data.wind.deg;
-r.insertAdjacentElement('beforeend',de);
-
-let lo = document.createElement('li');
-lo.textContent = '緯度:' + data.coord.lon;
-r.insertAdjacentElement('beforeend',lo);
-
-let la = document.createElement('li');
-la.textContent = '経度:' + data.coord.lat;
-r.insertAdjacentElement('beforeend',la);
