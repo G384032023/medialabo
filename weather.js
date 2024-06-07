@@ -60,6 +60,13 @@ function showResult(){
 
   let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + o.getAttribute('value') + '.json';
   axios.get(url).then(Result).catch(showError).then(finish);
+
+  let cs = document.querySelectorAll('input[name = "option"]');
+  for(let c of cs){
+    if(c.checked){
+      console.log(c.value);
+    }
+  }
 }
 
 function Result(resp){
