@@ -48,6 +48,7 @@ let data = {
 ////////// 課題3-2 ここからプログラムを書こう
 let b = document.querySelector('button#btn'); 
 b.addEventListener('click',showResult);
+let count = 0;
 function showResult(){
   let s = document.querySelector('select#name');
   let idx = s.selectedIndex;
@@ -65,7 +66,15 @@ function showResult(){
 function Result(resp){
   let server = resp.data;
 
+  if(count > 1){
+  let l = document.querySelector('div#result > p');
+  for(let n of l){
+      n.remove();
+    }
+  }
+  
   let re = document.querySelector('div#result');
+  
   let cs = document.querySelectorAll('input[name = "option"]');
   if(weather.checked){
     let wea = document.createElement('p');
@@ -114,6 +123,7 @@ function Result(resp){
     re.insertAdjacentElement('beforeend', non);
   }
   console.log(server);
+  count = count + 1;
 }
 
 function showError(err){
