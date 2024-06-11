@@ -49,6 +49,7 @@ let data = {
 let b = document.querySelector('button#btn'); 
 b.addEventListener('click',showResult);
 let count = 0;
+let checkcount = 0;
 function showResult(){
   let s = document.querySelector('select#name');
   let idx = s.selectedIndex;
@@ -82,42 +83,51 @@ function Result(resp){
       wea.textContent = '天気:' + n.description;
     }
     re.insertAdjacentElement('beforeend', wea);
+    checkcount = checkcount + 1;
   }
   if(temp_max.checked){
     let temax = document.createElement('p');
     temax.textContent = '最高気温:' + server.main.temp_max + '℃';
     re.insertAdjacentElement('beforeend', temax);
+    checkcount = checkcount + 1;
   }
   if(temp_min.checked){
     let temin = document.createElement('p');
     temin.textContent = '最低気温:' + server.main.temp_min + '℃';
     re.insertAdjacentElement('beforeend', temin);
+    checkcount = checkcount + 1;
   }
   if(humidity.checked){
     let humi = document.createElement('p');
     humi.textContent = '湿度:' + server.main.humidity + '%';
     re.insertAdjacentElement('beforeend', humi);
+    checkcount = checkcount + 1;
   }
   if(speed.checked){
     let sp = document.createElement('p');
     sp.textContent = '風速:' + server.wind.speed + 'm/s';
     re.insertAdjacentElement('beforeend', sp);
+    checkcount = checkcount + 1;
   }
   if(deg.checked){
     let de = document.createElement('p');
     de.textContent = '風向:' + server.wind.deg;
     re.insertAdjacentElement('beforeend', de);
+    checkcount = checkcount + 1;
   }
   if(lon.checked){
     let lo = document.createElement('p');
     lo.textContent = '緯度:' + server.coord.lon + '°';
     re.insertAdjacentElement('beforeend', lo);
+    checkcount = checkcount + 1;
   }
   if(lat.checked){
     let la = document.createElement('p');
     la.textContent = '経度:' + server.coord.lat + '°';
     re.insertAdjacentElement('beforeend', la);
-  }else{
+    checkcount = checkcount + 1;
+  }
+  if(checkcount === 0){
     let non = document.createElement('p');
     non.textContent = '項目が選択されていません';
     re.insertAdjacentElement('beforeend', non);
