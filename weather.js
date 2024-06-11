@@ -127,7 +127,7 @@ function Result(resp){
     re.insertAdjacentElement('beforeend', la);
     checkcount = checkcount + 1;
   }
-  if('checkbox' =! checked){
+  if('checkbox' != checked){
     let non = document.createElement('p');
     non.textContent = '項目が選択されていません';
     re.insertAdjacentElement('beforeend', non);
