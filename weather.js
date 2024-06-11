@@ -66,8 +66,8 @@ function showResult(){
 function Result(resp){
   let server = resp.data;
 
-  if(count > 1){
-  let l = document.querySelector('div#result > p');
+  if(count > 0){
+  let l = document.querySelectorAll('div#result > p');
   for(let n of l){
       n.remove();
     }
