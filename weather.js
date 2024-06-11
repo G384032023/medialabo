@@ -73,31 +73,38 @@ function Result(resp){
       wea.textContent = '天気:' + n.description;
     }
     re.insertAdjacentElement('beforeend', wea);
-  }else if(temp_max.checked){
+  }
+  if(temp_max.checked){
     let temax = document.createElement('p');
     temax.textContent = '最高気温:' + server.main.temp_max + '℃';
     re.insertAdjacentElement('beforeend', temax);
-  }else if(temp_min.checked){
+  }
+  if(temp_min.checked){
     let temin = document.createElement('p');
     temin.textContent = '最低気温:' + server.main.temp_min + '℃';
     re.insertAdjacentElement('beforeend', temin);
-  }else if(humidity.checked){
+  }
+  if(humidity.checked){
     let humi = document.createElement('p');
     humi.textContent = '湿度:' + server.main.humidity + '%';
     re.insertAdjacentElement('beforeend', humi);
-  }else if(speed.checked){
+  }
+  if(speed.checked){
     let sp = document.createElement('p');
     sp.textContent = '風速:' + server.wind.speed + 'm/s';
     re.insertAdjacentElement('beforeend', sp);
-  }else if(deg.checked){
+  }
+  if(deg.checked){
     let de = document.createElement('p');
     de.textContent = '風向:' + server.wind.deg;
     re.insertAdjacentElement('beforeend', de);
-  }else if(lon.checked){
+  }
+  if(lon.checked){
     let lo = document.createElement('p');
     lo.textContent = '緯度:' + server.coord.lon + '°';
     re.insertAdjacentElement('beforeend', lo);
-  }else if(lat.checked){
+  }
+  if(lat.checked){
     let la = document.createElement('p');
     la.textContent = '経度:' + server.coord.lat + '°';
     re.insertAdjacentElement('beforeend', la);
