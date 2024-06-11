@@ -61,11 +61,15 @@ function showResult(){
   let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + o.getAttribute('value') + '.json';
   axios.get(url).then(Result).catch(showError).then(finish);
 
+  let re = document.querySelector('div#result');
   let cs = document.querySelectorAll('input[name = "option"]');
-  for(let c of cs){
-    if(c.checked){
-      console.log(c.value);
+  if(weather.checked){
+    let wea = document.createElement('p');
+    for(let n of url.weather){
+      wea.textContent = '天気:' + n.description;
     }
+    re.insertAdjacentElement('beforeend', wea);
+    console.log('value');
   }
 }
 
