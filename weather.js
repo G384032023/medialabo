@@ -127,7 +127,7 @@ function Result(resp){
     re.insertAdjacentElement('beforeend', la);
     checkcount = checkcount + 1;
   }
-  if(checkcount === 0){
+  if(checkcount < 1){
     let non = document.createElement('p');
     non.textContent = '項目が選択されていません';
     re.insertAdjacentElement('beforeend', non);
