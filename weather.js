@@ -64,7 +64,7 @@ function showResult(){
 
 function Result(resp){
   let server = resp.data;
-  
+
   let re = document.querySelector('div#result');
   let cs = document.querySelectorAll('input[name = "option"]');
   if(weather.checked){
@@ -73,7 +73,38 @@ function Result(resp){
       wea.textContent = '天気:' + n.description;
     }
     re.insertAdjacentElement('beforeend', wea);
-    console.log('value');
+  }else if(temp_max.checked){
+    let temax = document.createElement('p');
+    temax.textContent = '最高気温:' + server.main.temp_max + '℃';
+    re.insertAdjacentElement('beforeend', temax);
+  }else if(temp_min.checked){
+    let temin = document.createElement('p');
+    temin.textContent = '最低気温:' + server.main.temp_min + '℃';
+    re.insertAdjacentElement('beforeend', temin);
+  }else if(humidity.checked){
+    let humi = document.createElement('p');
+    humi.textContent = '湿度:' + server.main.humidity + '%';
+    re.insertAdjacentElement('beforeend', humi);
+  }else if(speed.checked){
+    let sp = document.createElement('p');
+    sp.textContent = '風速:' + server.wind.speed + 'm/s';
+    re.insertAdjacentElement('beforeend', sp);
+  }else if(deg.checked){
+    let de = document.createElement('p');
+    de.textContent = '風向:' + server.wind.deg;
+    re.insertAdjacentElement('beforeend', de);
+  }else if(lon.checked){
+    let lo = document.createElement('p');
+    lo.textContent = '緯度:' + server.coord.lon + '°';
+    re.insertAdjacentElement('beforeend', lo);
+  }else if(lat.checked){
+    let la = document.createElement('p');
+    la.textContent = '経度:' + server.coord.lat + '°';
+    re.insertAdjacentElement('beforeend', la);
+  }else{
+    let non = document.createElement('p');
+    non.textContent = '項目が選択されていません';
+    re.insertAdjacentElement('beforeend', non);
   }
   console.log(server);
 }
