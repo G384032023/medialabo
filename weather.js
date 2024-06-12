@@ -49,7 +49,7 @@ let data = {
 let b = document.querySelector('button#btn'); 
 b.addEventListener('click',showResult);
 let count = 0;
-let checkcount = 0;
+
 function showResult(){
   let s = document.querySelector('select#name');
   let idx = s.selectedIndex;
@@ -65,6 +65,7 @@ function showResult(){
 }
 
 function Result(resp){
+  let checkcount = 0;
   let server = resp.data;
 
   if(count > 0){
