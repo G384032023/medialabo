@@ -10,4 +10,6 @@ div {
 
 body{
 	background: url(anime-style-clouds_23-2151071691.jpg.avif) no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
