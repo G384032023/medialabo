@@ -13,3 +13,7 @@ body{
 	background-position: center center;
 	background-size: cover;
 }
+
+h1{
+	background:linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 100%);
+}
