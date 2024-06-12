@@ -57,8 +57,8 @@ function showResult(){
   let os = s.querySelectorAll('option');
   let o = os.item(idx);
 
-  console.log('value = ' + o.getAttribute('value'));
-  console.log('textContent = ' + o.textContent);
+  //console.log('value = ' + o.getAttribute('value'));
+  //console.log('textContent = ' + o.textContent);
 
   let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + o.getAttribute('value') + '.json';
   axios.get(url).then(Result).catch(showError).then(finish);
@@ -127,12 +127,12 @@ function Result(resp){
     re.insertAdjacentElement('beforeend', la);
     checkcount = checkcount + 1;
   }
-  if('checkbox' != checked){
+  if(checkcount < 1){
     let non = document.createElement('p');
     non.textContent = '項目が選択されていません';
     re.insertAdjacentElement('beforeend', non);
   }
-  console.log(server);
+  //console.log(server);
   count = count + 1;
 }
 
