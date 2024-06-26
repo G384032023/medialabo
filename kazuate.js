@@ -49,10 +49,10 @@ function hantei() {
   ans.textContent = yoso;
 
   let re = document.querySelector('p#result');
-  if(kaisu >= 4){
-    re.textContent = '答えは' + kotae + 'でした．すでにゲームは終わっています．';
-  }else if(yoso === kotae){
+  if(yoso === kotae){
     re.textContent = '正解です．おめでとう！';
+  }else if(kaisu >= 4 || (kaisu >= 2 && yoso === kotae)){
+    re.textContent = '答えは' + kotae + 'でした．すでにゲームは終わっています．';
   }else if(kaisu === 3 && yoso !== kotae){
     re.textContent = 'まちがい．残念でした答えは' + kotae + 'でした．';
   }else{
