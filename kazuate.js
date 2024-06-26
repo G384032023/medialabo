@@ -8,6 +8,8 @@ b.addEventListener('click', hantei);
 // 入力回数（予想回数）
 let kaisu = 0;
 
+let seikai = 0;
+
 // 予想を4回実行する
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
 // 代わりにここでは，ボタンを押したら hantei() を呼び出すイベント処理をする
@@ -49,10 +51,11 @@ function hantei() {
   ans.textContent = yoso;
 
   let re = document.querySelector('p#result');
-  if(yoso === kotae){
-    re.textContent = '正解です．おめでとう！';
-  }else if(kaisu >= 4 || (kaisu >= 2 && yoso === kotae)){
+  if(kaisu >= 4 || (seikai >= 1 && yoso === kotae)){
     re.textContent = '答えは' + kotae + 'でした．すでにゲームは終わっています．';
+  }else if(yoso === kotae){
+    re.textContent = '正解です．おめでとう！';
+    seikai = seikai + 1;
   }else if(kaisu === 3 && yoso !== kotae){
     re.textContent = 'まちがい．残念でした答えは' + kotae + 'でした．';
   }else{
